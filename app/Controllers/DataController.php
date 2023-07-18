@@ -17,7 +17,7 @@ class DataController extends BaseController
             $data = $this->request->getPost('data');
 
 
-            $dataArray = explode('', $data);
+            $dataArray = explode(' ', $data);
             $field1 = strtoupper($dataArray[0]);
             $field2 = $dataArray[1];
             $field3 = strtoupper($dataArray[2]);
@@ -36,7 +36,7 @@ class DataController extends BaseController
                 // 'created_at' => $tanggal
             ]);
 
-            return redirect()->to('homepage');
+            return redirect()->to('homepage.php');
         }
 
         return view('homepage');
